@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jyun1412.github.io/traffic-revenue-lab-hhw/sitemap.xml
