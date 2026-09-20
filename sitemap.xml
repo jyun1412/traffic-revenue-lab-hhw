@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jyun1412.github.io/traffic-revenue-lab-hhw/</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://jyun1412.github.io/traffic-revenue-lab-hhw/</loc><lastmod>2026-09-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://jyun1412.github.io/traffic-revenue-lab-hhw/paint-window-test/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://jyun1412.github.io/traffic-revenue-lab-hhw/paint-window-test/duration-before-rain/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://jyun1412.github.io/traffic-revenue-lab-hhw/paint-window-test/latitude-weather-window/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://jyun1412.github.io/traffic-revenue-lab-hhw/paint-window-test/valspar-duramax-weather/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://jyun1412.github.io/traffic-revenue-lab-hhw/paint-window-test/valspar-integrity-select-weather/</loc><lastmod>2026-09-20</lastmod></url>
 </urlset>
