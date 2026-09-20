@@ -1,4 +1,5 @@
 const GA_ID='G-1B9F5Q2TKZ';
+const OPERATOR_MODE=new URLSearchParams(location.search).get('operator')==='1';
 const BASE='/traffic-revenue-lab-hhw/paint-window-test/';
 const PRODUCTS={
  duration:{name:'Sherwin-Williams Duration Exterior',brand:'Sherwin-Williams',minF:35,maxF:null,precipHours:3,postMinF:35,postHours:48,dewSpreadF:5,source:'https://sherlink.sherwin.com/sher-link/ViewHearsCountryCodeDoc?language=E&sku=650405830&type=DP',rule:'Air, surface and material above 35°F and at least 5°F above dew point; avoid rain or snow expected within 2–3 hours; do not allow air or surface below 35°F within 48 hours.'},
@@ -8,7 +9,7 @@ const PRODUCTS={
 };
 let analyticsReady=false;
 function gtag(){window.dataLayer=window.dataLayer||[];window.dataLayer.push(arguments)}
-function loadAnalytics(){if(analyticsReady)return;analyticsReady=true;window.dataLayer=window.dataLayer||[];gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(GA_ID);document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID,{send_page_view:true,allow_google_signals:false});}
+function loadAnalytics(){if(OPERATOR_MODE||analyticsReady)return;analyticsReady=true;window.dataLayer=window.dataLayer||[];gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(GA_ID);document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID,{send_page_view:true,allow_google_signals:false});}
 function setConsent(choice){localStorage.setItem('trl_analytics_consent',choice);const c=document.getElementById('consent');if(c)c.hidden=true;if(choice==='granted')loadAnalytics()}
 function sendEvent(name,params={}){if(analyticsReady)gtag('event',name,params)}
 function initConsent(){const c=document.getElementById('consent');if(!c)return;const saved=localStorage.getItem('trl_analytics_consent');if(saved==='granted')loadAnalytics();else if(saved!=='denied')c.hidden=false;document.getElementById('acceptAnalytics')?.addEventListener('click',()=>setConsent('granted'));document.getElementById('declineAnalytics')?.addEventListener('click',()=>setConsent('denied'));document.getElementById('privacyPrefs')?.addEventListener('click',e=>{e.preventDefault();c.hidden=false})}
